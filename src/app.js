@@ -10,7 +10,9 @@ const app = express();
 mongoose.connect('mongodb+srv://admin:123@cluster0.c8pww.mongodb.net/Cluster0');
 
 //Carrega Models
-const modelProduct = require('./models/product');
+const Product = require('./models/product');
+const Customer = require('./models/customer');
+const Order = require('./models/order');
 
 //Carrega as Rotas
 const indexRoute = require('./routes/index-route');
@@ -23,4 +25,3 @@ app.use('/', indexRoute);
 app.use('/products', productRoute);
 
 module.exports = app;
-
