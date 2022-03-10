@@ -1,7 +1,6 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const product = require('../models/product');
 const Product = mongoose.model('Product');
 
 exports.ListProducts = async (fields) => {

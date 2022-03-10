@@ -14,7 +14,7 @@ const schema = new Schema({
     },
     password:{
         type: String,
-        required: true
+        required: [true, "O password é obrigatório."]
     }
 });
 
