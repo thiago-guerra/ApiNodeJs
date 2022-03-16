@@ -13,3 +13,16 @@ exports.ExistsCustomer = async (email) => {
     var result = await Customer.findOne({ email: email });
     return result != null;
 }
+
+exports.authenticate = async (data) =>{
+    const res = await Customer.findOne({
+        email: data.email,
+        password: data.password
+    });
+    return res;
+}
+
+exports.refreshToken = async (id) =>{
+    const res = await Customer.findById(id);
+    return res;
+}
