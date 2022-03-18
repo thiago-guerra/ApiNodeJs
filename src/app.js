@@ -3,11 +3,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const config = require('./config');
 
 const app = express();
 
 //Conecta banco
-mongoose.connect('mongodb+srv://admin:123@cluster0.c8pww.mongodb.net/Cluster0');
+mongoose.connect(config.connectionString);
 
 //Carrega Models
 const Product = require('./models/product');

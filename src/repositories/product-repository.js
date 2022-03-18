@@ -30,7 +30,8 @@ exports.UpdateProduct = async (id, data) => {
             title: data.title,
             description: data.description,
             price: data.price,
-            slug: data.slug
+            slug: data.slug,
+            image: data.image
         }
     });
 }
