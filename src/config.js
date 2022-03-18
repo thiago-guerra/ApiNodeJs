@@ -3,7 +3,7 @@ global.EMAIL_TMPL = 'Olá, <strong>{0}</strong>. Seja bem vindo ao Node Store Ap
 
 module.exports = {
     connectionString: 'mongodb+srv://admin:123@cluster0.c8pww.mongodb.net/Cluster0',
-    sendgridKey: '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',
-    containerStorageConnectionString: 'DefaultEndpointsProtocol=https;AccountName=nodeapistore;AccountKey=GI/GwdQHC09cAZkWAEAdZJd4MTNn7Sp1C+duX1AIG/yC+2Ki/gX52HB7MXkePj4lq7X+SFjsnZTZaagbj6KyrQ==;EndpointSuffix=core.windows.net',
+    sendgridKey: 'apiKey',
+    containerStorageConnectionString: 'ConnectionStringAzureStorage',
     baseUrlAzureStorage: 'https://nodeapistore.blob.core.windows.net',
 }
