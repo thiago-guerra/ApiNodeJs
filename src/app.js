@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const config = require('./config');
+const path = require('path');
 
 const app = express();
 
@@ -23,6 +24,7 @@ const orderRoute = require('./routes/order-route');
 
 app.use(bodyParser.json({ limit: '5mb' }));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //Habilita o CORS
 app.use(function (req, res, next) {
@@ -33,6 +35,7 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRoute);
+
 app.use('/products', productRoute);
 app.use('/customer', customerRoute);
 app.use('/orders', orderRoute);
